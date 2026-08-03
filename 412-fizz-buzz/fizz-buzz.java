@@ -7,15 +7,15 @@ class Solution
         {
             if(x%3==0 && x%5==0)
             {
-                 str.add("FizzBuzz");
+                str.add("FizzBuzz");
+            }
+            else if(x%3==0)
+            {
+                str.add("Fizz");
             }
             else if(x%5==0)
             {
-                 str.add("Buzz");
-            }
-            else if(x%3==0 )
-            {
-                 str.add("Fizz");
+                str.add("Buzz");
             }
             else
             {
