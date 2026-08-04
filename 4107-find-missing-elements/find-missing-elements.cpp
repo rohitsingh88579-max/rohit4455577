@@ -5,8 +5,9 @@ public:
     {
         int n=nums.size();
         sort(nums.begin(),nums.end());
-        vector<int> ar;
         int start=nums[0],end=nums[n-1];
+        vector<int>ar;
+        
         int x=0;
         while(start<=end)
         {
