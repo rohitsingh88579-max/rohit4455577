@@ -1,12 +1,11 @@
-class Solution {
-    public int strStr(String haystack, String needle) {
-        int n = haystack.length();
-        for (int x = 0; x <=n - needle.length(); x++) {
-            char ch = haystack.charAt(x);
-            if (haystack.substring(x, x + needle.length()).equals(needle)) {
-                return x;
-            }
+class Solution 
+{
+    public int strStr(String haystack, String needle) 
+    {
+        if(haystack.contains(needle))
+        {
+            return haystack.indexOf(needle);
         }
-        return -01;
+        return -1;
     }
 }
