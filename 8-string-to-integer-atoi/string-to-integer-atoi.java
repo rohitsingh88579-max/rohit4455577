@@ -2,32 +2,32 @@ class Solution
 {
     public int myAtoi(String s) 
     {
-       s=s.trim();
-       int sign=1;
-       int x=0;
-       long res=0;
-       if(s.length()==0)
-       {
-         return 0;
-       }    
-       if(s.charAt(0)=='-')
-       {
-        sign=-1;
-        x++;
-       }
-       else if(s.charAt(0)=='+')
-       {
-        x++;
-       }
-       while(x<s.length())
-       {
-        char ch=s.charAt(x);
-        if(ch<'0'||ch>'9')
+        s=s.trim();
+        int x=0;
+        long res=0;
+        int sign=1;
+        if(s.length()==0)
         {
-            break;
+            return 0;
         }
-         res=res*10+(ch-'0');
-         if(sign*res>Integer.MAX_VALUE)
+        if(s.charAt(0)=='-')
+        {
+            sign=-1;
+            x++;
+        }
+        if(s.charAt(0)=='+')
+        {
+            x++;
+        }
+        while(x<s.length())
+        {
+            char ch=s.charAt(x);
+            if(ch<'0'||ch>'9')
+            {
+                break;
+            }
+            res=res*10+(ch-'0');
+            if(sign*res>Integer.MAX_VALUE)
          {
             return Integer.MAX_VALUE;
          }
@@ -36,7 +36,7 @@ class Solution
             return Integer.MIN_VALUE;
          }
          x++;
-       }
-       return (int)(sign*res);
+        }
+        return (int)(sign*res);
     }
 }
