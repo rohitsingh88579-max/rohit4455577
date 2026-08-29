@@ -6,9 +6,9 @@ class Solution
         int right=s.length-1;
         while(left<=right)
         {
-            char temp=s[left];
+            char c=s[left];
             s[left]=s[right];
-            s[right]=temp;
+            s[right]=c;
             left++;
             right--;
         }
