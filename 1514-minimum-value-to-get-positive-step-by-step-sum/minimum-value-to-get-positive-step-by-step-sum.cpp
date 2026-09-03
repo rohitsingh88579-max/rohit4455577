@@ -22,7 +22,7 @@ class Solution
        int count=1;
        while(low<=high)
        {
-         int mid=(low+high)/2;
+         int mid=low+(high-low)/2;
          if(step_sum(nums,mid))
          {
             count=mid;
