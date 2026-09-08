@@ -15,7 +15,6 @@ class Solution
         {
             l=max(l,height[start]);
             r=max(r,height[end]);
-            
             if(l<r)
             {
                 total+=l-height[start];
@@ -26,7 +25,7 @@ class Solution
                 total+=r-height[end];
                 end--;
             }
-        }
+        }    
         return total;
     }
 };
