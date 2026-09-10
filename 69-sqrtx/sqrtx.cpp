@@ -3,11 +3,13 @@ class Solution
     public:
     int mySqrt(int x) 
     {
-        int i=0;
-        while((long long)i*i<=x)
-        {
-            i++;
-        }    
-        return i-1;
-    }
+       int ans=0;
+       for(long long i=0;i<=x;i++)
+       {
+        if(i*i<=x)
+        ans=i;
+        else break;
+       }
+       return  ans;
+   }
 };
