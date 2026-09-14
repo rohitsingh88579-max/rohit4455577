@@ -8,16 +8,16 @@ class Solution
         vector<vector<int>>ans;
         for(int x=0;x<sub;x++)
         {
-            vector<int>total;
+            vector<int>subset;
             for(int y=0;y<n;y++)
             {
                 if(x & (1<<y))
                 {
-                    total.push_back(nums[y]);
+                    subset.push_back(nums[y]);
                 }
             }
-            ans.push_back(total);
-        }
+            ans.push_back(subset);
+        }    
         return ans;
     }
 };
