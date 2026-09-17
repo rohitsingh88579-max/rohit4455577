@@ -3,31 +3,31 @@ class Solution
     public:
     vector<vector<string>> solveNQueens(int n) 
     {
-        vector<vector<string>>ans;
-        vector<string>board(n);    
-        string s(n,'.');
-        for(int x=0;x<n;x++)
-        {
-            board[x]=s;
-        }
-        solve(0,ans,board,n);
-        return ans;
+       vector<vector<string>>ans;
+       vector<string>board(n);
+       string s(n,'.');
+       for(int x=0;x<n;x++)
+       {
+        board[x]=s;
+       }        
+       solve(0,board,ans,n);
+       return ans;
     }
     public:
-    void solve(int col,vector<vector<string>>& ans,vector<string>& board,int n)
+    void solve(int col,vector<string>& board,vector<vector<string>>& ans,int n)
     {
-        if(col==n)
+        if(n==col)
         {
             ans.push_back(board);
             return;
         }
-        for(int x=0;x<n;x++)
+        for(int row=0;row<n;row++)
         {
-            if(isSafe(x,col,board,n))
+            if(isSafe(row,col,board,n))
             {
-               board[x][col]='Q';
-               solve(col+1,ans,board,n);
-               board[x][col]='.';
+              board[row][col]='Q';
+              solve(col+1,board,ans,n);
+              board[row][col]='.';
             }
         }
     }
