@@ -1,18 +1,23 @@
-class Solution {
-    public int minMaxGame(int[] nums) {
-        int n = nums.length;
-        
-        while (n > 1) {
-            n /= 2;
-            for (int i = 0; i < n; i++) {
-                if (i % 2 == 0) {
-                    nums[i] = Math.min(nums[2 * i], nums[2 * i + 1]);
-                } else {
-                    nums[i] = Math.max(nums[2 * i], nums[2 * i + 1]);
-                }
+class Solution 
+{
+    public int minMaxGame(int[] nums) 
+    {
+       int n=nums.length;
+       while(n>1)
+       {
+        n/=2;
+        for(int x=0;x<n;x++)
+        {
+            if(x%2==0)
+            {
+                nums[x]=Math.min(nums[2*x],nums[2*x+1]);
+            }
+            else
+            {
+                nums[x]=Math.max(nums[2*x],nums[2*x+1]);
             }
         }
-        
-        return nums[0];
+       }   
+       return nums[0];
     }
 }
