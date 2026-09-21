@@ -4,6 +4,13 @@ class Solution
     {
         int m=coordinate1.charAt(0)-'a'+coordinate1.charAt(1)-'a';
         int n=coordinate2.charAt(0)-'a'+coordinate2.charAt(1)-'a';
-        return m%2==n%2;
+        if(m%2==n%2)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
