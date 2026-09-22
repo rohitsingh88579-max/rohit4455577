@@ -30,9 +30,9 @@ class Solution
                 left++;
                 right--;
                  while(left<right && nums[left]==nums[left-1])
-            {
-                left++;
-            }
+                 {
+                   left++;
+                }
             }
          }
        }
