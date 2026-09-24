@@ -7,7 +7,7 @@ class Solution
         
         for(int x=0;x<n;x++)
         {
-            nums[x]*=nums[x];
+            nums[x]=pow(nums[x],2);
         }    
         sort(nums.begin(),nums.end());
         return nums;
