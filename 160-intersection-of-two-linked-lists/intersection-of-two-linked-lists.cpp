@@ -14,19 +14,14 @@ class Solution
         ListNode *p=headA;
         ListNode *q=headB;
 
-        while(p!=NULL)
+        while(p!=q)
         {
-            ListNode* temp=q;
-            while(temp!=NULL)
-            {
-                if(p==temp)
-                {
-                    return temp;
-                }
-                temp=temp->next;
-            }
-            p=p->next;
+            if(p==NULL)
+            p=headB;
+            else p=p->next;
+            if(q==NULL) q=headA;
+            else q=q->next;
         }  
-        return NULL; 
+        return p; 
     }
 };
