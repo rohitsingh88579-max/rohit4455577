@@ -17,13 +17,6 @@ class Solution
                 temp/=10;
             }
         }
-        if(sum==n)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return sum==n;
     }
 }
